@@ -16,9 +16,11 @@ export default function TodoList({ title, tasks, addTask }) {
     <div className={styles.todoCategory}>
       <h3>{title}</h3>
       <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
+        {tasks && Array.isArray(tasks) && tasks.length > 0 ? (
+          tasks.map((task, index) => <li key={index}>{task}</li>)
+        ) : (
+          <p>No tasks available</p>
+        )}
       </ul>
 
       <form onSubmit={handleAddTask}>
