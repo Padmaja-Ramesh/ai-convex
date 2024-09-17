@@ -1,4 +1,5 @@
-import TodoCategories from './components/TodoCategories';
+// src/pages/index.js
+import TodoCategories from './components/TodoCategories';  // Ensure this path is correct
 
 export default function Home() {
   return (
